@@ -8,7 +8,6 @@ import {
 import { basename, sep, join } from 'node:path'
 import { tmpdir } from 'node:os'
 import process from 'node:process'
-import DOMException from 'node-domexception'
 
 import { File } from './file.js'
 import { Blob } from './index.js'

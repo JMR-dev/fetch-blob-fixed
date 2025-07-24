@@ -12,7 +12,7 @@ Use the built-in [`Blob`](https://nodejs.org/docs/latest-v18.x/api/buffer.html#c
 ## Installation
 
 ```sh
-npm install fetch-blob
+pnpm install fetch-blob
 ```
 
 <details>
