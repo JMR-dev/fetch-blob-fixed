@@ -15,6 +15,8 @@ import { Blob } from './index.js'
 const { stat, mkdtemp } = fs
 let i = 0, tempDir, registry
 
+
+
 /**
  * @param {string} path filepath on the disk
  * @param {string} [type] mimetype to use

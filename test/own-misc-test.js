@@ -57,7 +57,7 @@ test(() => {
     const file = new File([], '', { lastModified })
     assert_equals(file.lastModified, 0)
   }
-}, 'Interpretes NaN value in lastModified option as 0')
+}, 'Interprets NaN value in lastModified option as 0')
 
 test(() => {
   assert_equals(blobFromSync, syncBlob)
