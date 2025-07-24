@@ -1,5 +1,13 @@
 // Don't want to use the FileReader, don't want to lowerCase the type either
 // import from 'https://wpt.live/resources/testharnessreport.js'
+import('https://wpt.live/FileAPI/file/File-constructor.any.js')
+import('https://wpt.live/FileAPI/blob/Blob-constructor.any.js')
+import('https://wpt.live/FileAPI/blob/Blob-array-buffer.any.js')
+import('https://wpt.live/FileAPI/blob/Blob-slice-overflow.any.js')
+import('https://wpt.live/FileAPI/blob/Blob-slice.any.js')
+import('https://wpt.live/FileAPI/blob/Blob-stream.any.js')
+import('https://wpt.live/FileAPI/blob/Blob-text.any.js')
+import('./own-misc-test.js')
 import { File, Blob } from '../from.js'
 
 let hasFailed
@@ -119,7 +127,7 @@ globalThis.Blob = Blob
 globalThis.garbageCollect = () => {}
 globalThis.test_blob = test_blob
 globalThis.test_blob_binary = test_blob_binary
-// Cuz WPT don't clean up after itself
+// Because WPT doesn't clean up after itself
 globalThis.MessageChannel = class extends MessageChannel {
   constructor () {
     super()
@@ -131,14 +139,6 @@ globalThis.MessageChannel = class extends MessageChannel {
   }
 }
 
-import('https://wpt.live/FileAPI/file/File-constructor.any.js')
-import('https://wpt.live/FileAPI/blob/Blob-constructor.any.js')
-import('https://wpt.live/FileAPI/blob/Blob-array-buffer.any.js')
-import('https://wpt.live/FileAPI/blob/Blob-slice-overflow.any.js')
-import('https://wpt.live/FileAPI/blob/Blob-slice.any.js')
-import('https://wpt.live/FileAPI/blob/Blob-stream.any.js')
-import('https://wpt.live/FileAPI/blob/Blob-text.any.js')
-import('./own-misc-test.js')
 
 if (hasFailed) {
   console.log('Tests failed')
