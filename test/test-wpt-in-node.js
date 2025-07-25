@@ -64,7 +64,7 @@ function test_blob(fn, expectations) {
     assert_true(blob instanceof Blob);
     assert_false(blob instanceof File);
     assert_equals(blob.type.toLowerCase(), type.toLowerCase());
-    // assert_equals(await blob.text(), expected)
+    assert_equals(await blob.text(), expected);
     const result = await blob.text();
 
     // Ensure we're comparing strings
