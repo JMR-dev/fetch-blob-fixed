@@ -1,4 +1,4 @@
-# fetch-blob
+# fetch-blob-fixed
 
 [![npm version][npm-image]][npm-url]
 [![build status][ci-image]][ci-url]
@@ -9,24 +9,20 @@ A Blob implementation in Node.js, originally from [node-fetch](https://github.co
 
 Use the built-in [`Blob`](https://nodejs.org/docs/latest-v18.x/api/buffer.html#class-blob) in Node.js 18 and later.
 
+
+This package is a fork from the original `fetch-blob` package, which was deprecated in favor of the built-in `Blob` class in Node.js 18 and later. This fork is maintained for specific use cases that require a polyfill and for packages that already use this implementation. Credit to Jimmy Wärting and other contributors for the original implementation.
+
+Packages should migrate to the built-in `Blob` class in Node.js 18 and later. This package will not be maintained forever. Committing to support through July 2028, after which it will be deprecated.
+
+This package was created to remove deprecated packages from the original `fetch-blob` package and allow it to work with modern Node.js versions when necessary. It is not intended to be a long-term solution. This was made to ensure I did not have deprecated packages in my project.
+
+I also moved this project to `pnpm`, as it is the package manager I use and prefer. It is not a requirement to use this package, but if you develop anything further on top of this, `pnpm` is recommended for consistency.
+
 ## Installation
 
 ```sh
-pnpm install fetch-blob
+pnpm install fetch-blob-fixed
 ```
-
-<details>
-  <summary>Upgrading from 2x to 3x</summary>
-
-  Updating from 2 to 3 should be a breeze since there is not many changes to the blob specification.
-  The major cause of a major release is coding standards.
-    - internal WeakMaps was replaced with private fields
-    - internal Buffer.from was replaced with TextEncoder/Decoder
-    - internal buffers was replaced with Uint8Arrays
-    - CommonJS was replaced with ESM
-    - The node stream returned by calling `blob.stream()` was replaced with whatwg streams
-    - (Read "Differences from other blobs" for more info.)
-</details>
 
 <details>
   <summary>Differences from other Blobs</summary>
