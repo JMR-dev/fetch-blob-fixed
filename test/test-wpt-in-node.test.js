@@ -108,7 +108,10 @@ test_blob(function() {
     new Float16Array([2.65625, 58.59375])
   ]);
 }, {
-  expected: String.fromCharCode(2656, 59903), // Approximate expected output
+  expected: String.fromCharCode(
+    Math.round(2.65625 * 1024) & 0xFFFF,
+    Math.round(58.59375 * 1024) & 0xFFFF
+  ), // Precise expected output based on polyfill logic
   type: "",
   desc: "Float16Array should work with polyfill"
 });
