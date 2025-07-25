@@ -65,10 +65,7 @@ function test_blob(fn, expectations) {
     assert_false(blob instanceof File);
     assert_equals(blob.type.toLowerCase(), type.toLowerCase());
     // assert_equals(await blob.text(), expected)
-    // Add debugging to see what we're actually getting
     const result = await blob.text();
-    console.log("Expected:", expected, "typeof:", typeof expected);
-    console.log("Got:", result, "typeof:", typeof result);
 
     // Ensure we're comparing strings
     const resultStr = typeof result === "string" ? result : String(result);
