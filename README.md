@@ -1,9 +1,6 @@
 # fetch-blob-fixed
 
 [![npm version][npm-image]][npm-url]
-[![build status][ci-image]][ci-url]
-[![coverage status][codecov-image]][codecov-url]
-[![install size][install-size-image]][install-size-url]
 
 A Blob implementation in Node.js, originally from [node-fetch](https://github.com/node-fetch/node-fetch).
 
@@ -116,14 +113,6 @@ An example of this could be to create a file or blob like item coming from a rem
 
 See the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob) and [tests](https://github.com/node-fetch/fetch-blob/blob/master/test.js) for more details of how to use the Blob.
 
-[npm-image]: https://flat.badgen.net/npm/v/fetch-blob
-[npm-url]: https://www.npmjs.com/package/fetch-blob
-[ci-image]: https://github.com/node-fetch/fetch-blob/workflows/CI/badge.svg
-[ci-url]: https://github.com/node-fetch/fetch-blob/actions
-[codecov-image]: https://flat.badgen.net/codecov/c/github/node-fetch/fetch-blob/master
-[codecov-url]: https://codecov.io/gh/node-fetch/fetch-blob
-[install-size-image]: https://flat.badgen.net/packagephobia/install/fetch-blob
-[install-size-url]: https://packagephobia.now.sh/result?p=fetch-blob
-[fs-blobs]: https://github.com/nodejs/node/issues/37340
-[fsPromises.writeFile]: https://nodejs.org/dist/latest-v18.x/docs/api/fs.html#fspromiseswritefilefile-data-options
-[FinalizationRegistry]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
+
+
+[npm-url]: https://www.npmjs.com/package/fetch-blob-fixed
